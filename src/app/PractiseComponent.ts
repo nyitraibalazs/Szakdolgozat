@@ -84,168 +84,175 @@ export class PractiseComponent implements OnInit {
       var myGI = new Array(12);
       var myMIter = new Array(12);
       var myTudasfel = new Array(12);
+      var i=0;
+      var feltetel = 0;
 
-
-      do {
-        for (var i = 0; i < 1; i++) {
-          console.log("egyszer elindulok");
-          //1. csoport kérdései
-          if (this.maxeredmeny < 60) {
-            this.someElsoZH = this.service.EmberiIntelligencia();
-            var rnd1 = Math.floor((Math.random() * 5));
-            this.elsozh = this.someElsoZH[rnd1];
-            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh.pontszam);
-            myEI[i] = rnd1;
-          }
-
-
-          if (this.maxeredmeny < 60) {
-            do {
-              rnd1 = Math.floor((Math.random() * 5));
-              this.elsozh1 = this.someElsoZH[rnd1];
-              this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh1.pontszam);
-              console.log(rnd1);
-              myEI[i + 1] = rnd1;
-
-            } while (myEI[i] == myEI[i + 1]);
-          }
-
-
-          if (this.maxeredmeny < 60) {
-            do {
-              rnd1 = Math.floor((Math.random() * 5));
-              this.elsozh2 = this.someElsoZH[rnd1];
-              myEI[i + 2] = rnd1;
-
-            } while (myEI[i + 1] == myEI[i + 2] || myEI[i] == myEI[i + 1] || myEI[i] == myEI[i + 2]);
-
-            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh2.pontszam);
-          }
-
-          //2. feladat gépi intelligencia
-          if (this.maxeredmeny < 60) {
-            this.someElsoZH1 = this.service.GepiIntelligencia();
-            var rnd1 = Math.floor((Math.random() * 5));
-            this.elsozh3 = this.someElsoZH1[rnd1];
-            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh3.pontszam);
-            myGI[i] = rnd1;
-          }
-
-
-          if (this.maxeredmeny < 60) {
-            do {
-              rnd1 = Math.floor((Math.random() * 5));
-              this.elsozh4 = this.someElsoZH1[rnd1];
-              console.log(rnd1);
-              myGI[i + 1] = rnd1;
-
-            } while (myGI[i] == myGI[i + 1]);
-            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh4.pontszam);
-          }
-
-
-          if (this.maxeredmeny < 60) {
-            do {
-              rnd1 = Math.floor((Math.random() * 5));
-              this.elsozh5 = this.someElsoZH1[rnd1];
-              myGI[i + 2] = rnd1;
-
-            } while (myGI[i + 1] == myGI[i + 2] || myGI[i] == myGI[i + 1] || myGI[i] == myGI[i + 2]);
-            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh5.pontszam);
-            console.log("max eredmeny" + this.maxeredmeny);
-          }
-
-          //3 rész MI területek
-          if (this.maxeredmeny < 60) {
-            this.someElsoZH2 = this.service.Miteruletek();
-            var rnd1 = Math.floor((Math.random() * 5));
-            this.elsozh6 = this.someElsoZH2[rnd1];
-            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh6.pontszam);
-            myMIter[i] = rnd1;
-          }
-
-
-          if (this.maxeredmeny < 60) {
-            do {
-              rnd1 = Math.floor((Math.random() * 5));
-              this.elsozh7 = this.someElsoZH2[rnd1];
-              console.log(rnd1);
-              myMIter[i + 1] = rnd1;
-
-            } while (myMIter[i] == myMIter[i + 1]);
-            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh7.pontszam);
-          }
-
-
-          if (this.maxeredmeny < 60) {
-            do {
-              rnd1 = Math.floor((Math.random() * 5));
-              this.elsozh8 = this.someElsoZH2[rnd1];
-              myMIter[i + 2] = rnd1;
-
-            } while (myMIter[i + 1] == myMIter[i + 2] || myMIter[i] == myMIter[i + 1] || myMIter[i] == myMIter[i + 2]);
-            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh8.pontszam);
-            console.log("max eredmeny" + this.maxeredmeny);
-          }
-
-
-          //4. rész Tudasfeldolgozas
-          if (this.maxeredmeny < 60) {
-            this.someElsoZH3 = this.service.Tudasfeldolgozas();
-            var rnd1 = Math.floor((Math.random() * 5));
-            this.elsozh9 = this.someElsoZH3[rnd1];
-            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh9.pontszam);
-            myTudasfel[i] = rnd1;
-          }
-
-
-          if (this.maxeredmeny < 60) {
-            do {
-              rnd1 = Math.floor((Math.random() * 5));
-              this.elsozh10 = this.someElsoZH3[rnd1];
-              console.log(rnd1);
-              myTudasfel[i + 1] = rnd1;
-
-            } while (myTudasfel[i] == myTudasfel[i + 1]);
-            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh10.pontszam);
-          }
-
-
-
-          //5. rész
-          if (this.maxeredmeny < 60) {
-            this.someElsoZH4 = this.service.Miteruletek();
-            var rnd1 = Math.floor((Math.random() * 5));
-            this.elsozh11 = this.someElsoZH4[rnd1];
-            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh11.pontszam);
-            myMIter[i] = rnd1;
-          }
-
-
-          if (this.maxeredmeny < 60) {
-            do {
-              rnd1 = Math.floor((Math.random() * 5));
-              this.elsozh12 = this.someElsoZH4[rnd1];
-              console.log(rnd1);
-              myMIter[i + 1] = rnd1;
-
-            } while (myMIter[i] == myMIter[i + 1]);
-            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh12.pontszam);
-          }
-
-
-          if (this.maxeredmeny < 60) {
-            do {
-              rnd1 = Math.floor((Math.random() * 5));
-              this.elsozh13 = this.someElsoZH4[rnd1];
-              myMIter[i + 2] = rnd1;
-
-            } while (myMIter[i + 1] == myMIter[i + 2] || myMIter[i] == myMIter[i + 1] || myMIter[i] == myMIter[i + 2]);
-            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh13.pontszam);
-            console.log("max eredmeny" + this.maxeredmeny);
-          }
+      while (feltetel == 0) {
+      if(this.maxeredmeny<59) {
+        console.log("egyszer elindulok");
+        //1. csoport kérdései
+        if (this.maxeredmeny < 60) {
+          this.someElsoZH = this.service.EmberiIntelligencia();
+          var rnd1 = Math.floor((Math.random() * 5));
+          this.elsozh = this.someElsoZH[rnd1];
+          this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh.pontszam);
+          myEI[i] = rnd1;
         }
-      } while (this.maxeredmeny < 65 && this.maxeredmeny >59);
+
+
+        if (this.maxeredmeny < 60) {
+          do {
+            rnd1 = Math.floor((Math.random() * 5));
+            this.elsozh1 = this.someElsoZH[rnd1];
+            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh1.pontszam);
+            console.log(rnd1);
+            myEI[i + 1] = rnd1;
+
+          } while (myEI[i] == myEI[i + 1]);
+        }
+
+
+        if (this.maxeredmeny < 60) {
+          do {
+            rnd1 = Math.floor((Math.random() * 5));
+            this.elsozh2 = this.someElsoZH[rnd1];
+            myEI[i + 2] = rnd1;
+
+          } while (myEI[i + 1] == myEI[i + 2] || myEI[i] == myEI[i + 1] || myEI[i] == myEI[i + 2]);
+
+          this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh2.pontszam);
+        }
+
+        //2. feladat gépi intelligencia
+        if (this.maxeredmeny < 60) {
+          this.someElsoZH1 = this.service.GepiIntelligencia();
+          var rnd1 = Math.floor((Math.random() * 5));
+          this.elsozh3 = this.someElsoZH1[rnd1];
+          this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh3.pontszam);
+          myGI[i] = rnd1;
+        }
+
+
+        if (this.maxeredmeny < 60) {
+          do {
+            rnd1 = Math.floor((Math.random() * 5));
+            this.elsozh4 = this.someElsoZH1[rnd1];
+            console.log(rnd1);
+            myGI[i + 1] = rnd1;
+
+          } while (myGI[i] == myGI[i + 1]);
+          this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh4.pontszam);
+        }
+
+
+        if (this.maxeredmeny < 60) {
+          do {
+            rnd1 = Math.floor((Math.random() * 5));
+            this.elsozh5 = this.someElsoZH1[rnd1];
+            myGI[i + 2] = rnd1;
+
+          } while (myGI[i + 1] == myGI[i + 2] || myGI[i] == myGI[i + 1] || myGI[i] == myGI[i + 2]);
+          this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh5.pontszam);
+          console.log("max eredmeny" + this.maxeredmeny);
+        }
+
+        //3 rész MI területek
+        if (this.maxeredmeny < 60) {
+          this.someElsoZH2 = this.service.Miteruletek();
+          var rnd1 = Math.floor((Math.random() * 5));
+          this.elsozh6 = this.someElsoZH2[rnd1];
+          this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh6.pontszam);
+          myMIter[i] = rnd1;
+        }
+
+
+        if (this.maxeredmeny < 60) {
+          do {
+            rnd1 = Math.floor((Math.random() * 5));
+            this.elsozh7 = this.someElsoZH2[rnd1];
+            console.log(rnd1);
+            myMIter[i + 1] = rnd1;
+
+          } while (myMIter[i] == myMIter[i + 1]);
+          this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh7.pontszam);
+        }
+
+
+        if (this.maxeredmeny < 60) {
+          do {
+            rnd1 = Math.floor((Math.random() * 5));
+            this.elsozh8 = this.someElsoZH2[rnd1];
+            myMIter[i + 2] = rnd1;
+
+          } while (myMIter[i + 1] == myMIter[i + 2] || myMIter[i] == myMIter[i + 1] || myMIter[i] == myMIter[i + 2]);
+          this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh8.pontszam);
+          console.log("max eredmeny" + this.maxeredmeny);
+        }
+
+
+        //4. rész Tudasfeldolgozas
+        if (this.maxeredmeny < 60) {
+          this.someElsoZH3 = this.service.Tudasfeldolgozas();
+          var rnd1 = Math.floor((Math.random() * 5));
+          this.elsozh9 = this.someElsoZH3[rnd1];
+          this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh9.pontszam);
+          myTudasfel[i] = rnd1;
+        }
+
+
+        if (this.maxeredmeny < 60) {
+          do {
+            rnd1 = Math.floor((Math.random() * 5));
+            this.elsozh10 = this.someElsoZH3[rnd1];
+            console.log(rnd1);
+            myTudasfel[i + 1] = rnd1;
+
+          } while (myTudasfel[i] == myTudasfel[i + 1]);
+          this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh10.pontszam);
+        }
+
+
+
+        //5. rész
+        if (this.maxeredmeny < 60) {
+          this.someElsoZH4 = this.service.Miteruletek();
+          var rnd1 = Math.floor((Math.random() * 5));
+          this.elsozh11 = this.someElsoZH4[rnd1];
+          this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh11.pontszam);
+          myMIter[i] = rnd1;
+        }
+
+
+        if (this.maxeredmeny < 60) {
+          do {
+            rnd1 = Math.floor((Math.random() * 5));
+            this.elsozh12 = this.someElsoZH4[rnd1];
+            console.log(rnd1);
+            myMIter[i + 1] = rnd1;
+
+          } while (myMIter[i] == myMIter[i + 1]);
+          this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh12.pontszam);
+        }
+
+
+        if (this.maxeredmeny < 60) {
+          do {
+            rnd1 = Math.floor((Math.random() * 5));
+            this.elsozh13 = this.someElsoZH4[rnd1];
+            myMIter[i + 2] = rnd1;
+
+          } while (myMIter[i + 1] == myMIter[i + 2] || myMIter[i] == myMIter[i + 1] || myMIter[i] == myMIter[i + 2]);
+          this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh13.pontszam);
+          console.log("max eredmeny" + this.maxeredmeny);
+        }
+
+        if(this.maxeredmeny == 60)  {
+          feltetel =1;
+        } else {
+          this.maxeredmeny = 0;
+        }
+      }
+      }
     }
 }
 
