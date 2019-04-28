@@ -8,6 +8,8 @@ import { PractiseServiceComponent } from './service';
     // styleUrls: ['../asdasd/asdasd']
 })
 
+
+
 export class PractiseComponent implements OnInit {
 
     someElsoZH: {};
@@ -26,11 +28,9 @@ export class PractiseComponent implements OnInit {
 
     public maxeredmeny;
     private pmax;
-    private rndEI: {};
-    private rndGI: [];
 
     //I. ZH eredményei
-    public elsozh;elsozh1;elsozh2;elsozh3;elsozh4;elsozh5;elsozh6;elsozh7;elsozh8;elsozh9;elsozh10: {
+    public elsozh;elsozh1;elsozh2;elsozh3;elsozh4;elsozh5;elsozh6;elsozh7;elsozh8;elsozh9;elsozh10;elsozh11;elsozh12;elsozh13: {
       id: any;
       pontszam: any;
       resz: any;
@@ -67,6 +67,7 @@ export class PractiseComponent implements OnInit {
     resz: any;
   };
 
+
   Osszes: {};
 
   public eredmeny;
@@ -80,10 +81,14 @@ export class PractiseComponent implements OnInit {
       this.maxeredmeny = 0;
       this.pmax = 12;
       var myEI = new Array(12);
+      var myGI = new Array(12);
+      var myMIter = new Array(12);
+      var myTudasfel = new Array(12);
 
 
       do {
         for (var i = 0; i < 1; i++) {
+          console.log("egyszer elindulok");
           //1. csoport kérdései
           if (this.maxeredmeny < 60) {
             this.someElsoZH = this.service.EmberiIntelligencia();
@@ -117,12 +122,13 @@ export class PractiseComponent implements OnInit {
             this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh2.pontszam);
           }
 
+          //2. feladat gépi intelligencia
           if (this.maxeredmeny < 60) {
             this.someElsoZH1 = this.service.GepiIntelligencia();
             var rnd1 = Math.floor((Math.random() * 5));
             this.elsozh3 = this.someElsoZH1[rnd1];
             this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh3.pontszam);
-            myEI[i] = rnd1;
+            myGI[i] = rnd1;
           }
 
 
@@ -131,9 +137,9 @@ export class PractiseComponent implements OnInit {
               rnd1 = Math.floor((Math.random() * 5));
               this.elsozh4 = this.someElsoZH1[rnd1];
               console.log(rnd1);
-              myEI[i + 1] = rnd1;
+              myGI[i + 1] = rnd1;
 
-            } while (myEI[i] == myEI[i + 1]);
+            } while (myGI[i] == myGI[i + 1]);
             this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh4.pontszam);
           }
 
@@ -142,9 +148,9 @@ export class PractiseComponent implements OnInit {
             do {
               rnd1 = Math.floor((Math.random() * 5));
               this.elsozh5 = this.someElsoZH1[rnd1];
-              myEI[i + 2] = rnd1;
+              myGI[i + 2] = rnd1;
 
-            } while (myEI[i + 1] == myEI[i + 2] || myEI[i] == myEI[i + 1] || myEI[i] == myEI[i + 2]);
+            } while (myGI[i + 1] == myGI[i + 2] || myGI[i] == myGI[i + 1] || myGI[i] == myGI[i + 2]);
             this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh5.pontszam);
             console.log("max eredmeny" + this.maxeredmeny);
           }
@@ -155,7 +161,7 @@ export class PractiseComponent implements OnInit {
             var rnd1 = Math.floor((Math.random() * 5));
             this.elsozh6 = this.someElsoZH2[rnd1];
             this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh6.pontszam);
-            myEI[i] = rnd1;
+            myMIter[i] = rnd1;
           }
 
 
@@ -164,9 +170,9 @@ export class PractiseComponent implements OnInit {
               rnd1 = Math.floor((Math.random() * 5));
               this.elsozh7 = this.someElsoZH2[rnd1];
               console.log(rnd1);
-              myEI[i + 1] = rnd1;
+              myMIter[i + 1] = rnd1;
 
-            } while (myEI[i] == myEI[i + 1]);
+            } while (myMIter[i] == myMIter[i + 1]);
             this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh7.pontszam);
           }
 
@@ -175,16 +181,71 @@ export class PractiseComponent implements OnInit {
             do {
               rnd1 = Math.floor((Math.random() * 5));
               this.elsozh8 = this.someElsoZH2[rnd1];
-              myEI[i + 2] = rnd1;
+              myMIter[i + 2] = rnd1;
 
-            } while (myEI[i + 1] == myEI[i + 2] || myEI[i] == myEI[i + 1] || myEI[i] == myEI[i + 2]);
+            } while (myMIter[i + 1] == myMIter[i + 2] || myMIter[i] == myMIter[i + 1] || myMIter[i] == myMIter[i + 2]);
             this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh8.pontszam);
             console.log("max eredmeny" + this.maxeredmeny);
           }
 
 
+          //4. rész Tudasfeldolgozas
+          if (this.maxeredmeny < 60) {
+            this.someElsoZH3 = this.service.Tudasfeldolgozas();
+            var rnd1 = Math.floor((Math.random() * 5));
+            this.elsozh9 = this.someElsoZH3[rnd1];
+            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh9.pontszam);
+            myTudasfel[i] = rnd1;
+          }
+
+
+          if (this.maxeredmeny < 60) {
+            do {
+              rnd1 = Math.floor((Math.random() * 5));
+              this.elsozh10 = this.someElsoZH3[rnd1];
+              console.log(rnd1);
+              myTudasfel[i + 1] = rnd1;
+
+            } while (myTudasfel[i] == myTudasfel[i + 1]);
+            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh10.pontszam);
+          }
+
+
+
+          //5. rész
+          if (this.maxeredmeny < 60) {
+            this.someElsoZH4 = this.service.Miteruletek();
+            var rnd1 = Math.floor((Math.random() * 5));
+            this.elsozh11 = this.someElsoZH4[rnd1];
+            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh11.pontszam);
+            myMIter[i] = rnd1;
+          }
+
+
+          if (this.maxeredmeny < 60) {
+            do {
+              rnd1 = Math.floor((Math.random() * 5));
+              this.elsozh12 = this.someElsoZH4[rnd1];
+              console.log(rnd1);
+              myMIter[i + 1] = rnd1;
+
+            } while (myMIter[i] == myMIter[i + 1]);
+            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh12.pontszam);
+          }
+
+
+          if (this.maxeredmeny < 60) {
+            do {
+              rnd1 = Math.floor((Math.random() * 5));
+              this.elsozh13 = this.someElsoZH4[rnd1];
+              myMIter[i + 2] = rnd1;
+
+            } while (myMIter[i + 1] == myMIter[i + 2] || myMIter[i] == myMIter[i + 1] || myMIter[i] == myMIter[i + 2]);
+            this.maxeredmeny = this.maxeredmeny + parseInt(this.elsozh13.pontszam);
+            console.log("max eredmeny" + this.maxeredmeny);
+          }
         }
-      } while (this.maxeredmeny < 59);
+      } while (this.maxeredmeny < 65 && this.maxeredmeny >59);
     }
 }
 
