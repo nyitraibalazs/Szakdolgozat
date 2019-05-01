@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Honlap címe</title>
+</head>
+
+<body>
+  <p>Hello world!</p>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
 <!--<mat-divider></mat-divider>-->
 
 <!--<div *ngFor="let arr of someKindOfMagixelsozh">
@@ -5,21 +27,62 @@
     {{arr.nev}}
 </div>
 -->
+<!--Mivel a arr csak 1 listán tud végigmenni de nekem sok listám van -->
+    <div *ngIf="isValid0">
+      <p>1. kérdés: {{elsozh.nev}}  ({{elsozh.pontszam}}p)</p>
+    </div>
 
-  <p>1. kérdés: {{elsozh.nev}}  ({{elsozh.pontszam}}p)</p>
-  <p>2. kérdés: {{elsozh1.nev}}  ({{elsozh1.pontszam}}p)</p>
-  <p>3. kérdés: {{elsozh2.nev}}  ({{elsozh2.pontszam}}p)</p>
-  <p>4. kérdés: {{elsozh3.nev}}  ({{elsozh3.pontszam}}p)</p>
-  <p>5. kérdés: {{elsozh4.nev}}  ({{elsozh4.pontszam}}p)</p>
-  <p>6. kérdés: {{elsozh5.nev}}  ({{elsozh5.pontszam}}p)</p>
-  <p>7. kérdés: {{elsozh6.nev}}  ({{elsozh6.pontszam}}p)</p>
-  <p>8. kérdés: {{elsozh7.nev}}  ({{elsozh7.pontszam}}p)</p>
-  <p>9. kérdés: {{elsozh8.nev}}  ({{elsozh8.pontszam}}p)</p>
-  <p>10. kérdés: {{elsozh9.nev}}  ({{elsozh9.pontszam}}p)</p>
-  <p>11. kérdés: {{elsozh10.nev}}  ({{elsozh10.pontszam}}p)</p>
-  <p>12. kérdés: {{elsozh11.nev}}  ({{elsozh11.pontszam}}p)</p>
-  <p>13. kérdés: {{elsozh12.nev}}  ({{elsozh12.pontszam}}p)</p>
-  <p>14. kérdés: {{elsozh13.nev}}  ({{elsozh13.pontszam}}p)</p>
+    <div *ngIf="isValid1">
+      <p>2. kérdés: {{elsozh1.nev}}  ({{elsozh1.pontszam}}p)</p>
+    </div>
+
+    <div *ngIf="isValid0">
+      <p>3. kérdés: {{elsozh2.nev}}  ({{elsozh2.pontszam}}p)</p>
+    </div>
+
+    <div *ngIf="isValid0">
+      <p>4. kérdés: {{elsozh3.nev}}  ({{elsozh3.pontszam}}p)</p>
+    </div>
+
+    <div *ngIf="isValid0">
+      <p>5. kérdés: {{elsozh4.nev}}  ({{elsozh4.pontszam}}p)</p>
+    </div>
+
+    <div *ngIf="isValid0">
+      <p>6. kérdés: {{elsozh5.nev}}  ({{elsozh5.pontszam}}p)</p>
+    </div>
+
+    <div *ngIf="isValid0">
+      <p>7. kérdés: {{elsozh6.nev}}  ({{elsozh6.pontszam}}p)</p>
+    </div>
+
+    <div *ngIf="isValid0">
+      <p>8. kérdés: {{elsozh7.nev}}  ({{elsozh7.pontszam}}p)</p>
+    </div>
+
+    <div *ngIf="isValid0">
+      <p>9. kérdés: {{elsozh8.nev}}  ({{elsozh8.pontszam}}p)</p>
+    </div>
+
+    <div *ngIf="isValid0">
+      <p>10. kérdés: {{elsozh9.nev}}  ({{elsozh9.pontszam}}p)</p>
+    </div>
+
+    <div *ngIf="isValid0">
+      <p>11. kérdés: {{elsozh10.nev}}  ({{elsozh10.pontszam}}p)</p>
+    </div>
+
+    <div *ngIf="isValid1">
+      <p>12. kérdés: {{elsozh11.nev}}  ({{elsozh11.pontszam}}p)</p>
+    </div>
+
+    <div *ngIf="isValid2">
+      <p>13. kérdés: {{elsozh12.nev}}  ({{elsozh12.pontszam}}p)</p>
+    </div>
+
+    <div *ngIf="isValid3">
+        <p>14. kérdés: {{elsozh13.nev}}  ({{elsozh13.pontszam}}p)</p>
+    </div>
 
   <p>Összpontszám {{maxeredmeny}}</p>
 <!--
