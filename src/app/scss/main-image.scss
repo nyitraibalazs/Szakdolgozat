@@ -1,0 +1,111 @@
+.main-image {
+    //background-image: url("../image/contact/linkpage.jpeg");
+    background-position: 0 0;
+    height: 300px;
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-attachment: inherit;
+    text-align: center;
+
+    .main-image__text {
+        padding-top: 30px;
+        font-size: 14px;
+        color: $white;
+        font-family: $Montserrat;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        h1 {
+            padding-top: 20px;
+            font-size: 50px;
+            font-weight: bold;
+            text-shadow: 0 -1px 1px $white;
+            letter-spacing: -.05em;
+        }
+
+        .main-image__england {
+            &:after {
+                margin-top: 20px;
+                content: "";
+                display: block;
+                height: 2px;
+                width: 40%;
+                position: absolute;
+                left: 30%;
+                right: 50%;
+
+                background-color: $white;
+            }
+        }
+    }
+}
+
+@media (min-width: 520px){
+    .main-image {
+        background-position: 50% 0;
+
+        .main-image__text {
+
+            .main-image__england {
+                &:after {
+                    width: 30%;
+                    left: 35%;
+                    right: 50%;
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .main-image {
+        .main-image__text {
+            font-size: 20px;
+            top: 45%;
+            left: 50%;
+
+            h1 {
+                font-size: 60px;
+            }
+
+            .main-image__england {
+                &:after {
+                    width: 110px;
+                    left: 37%;
+                    right: 48%;
+
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 992px){
+    .main-image {
+        .main-image__text {
+
+            h1 {
+                font-size: 70px;
+            }
+
+            .main-image__england {
+                &:after {
+                    width: 110px;
+                    left: 41%;
+                    right: 47%;
+
+                }
+            }
+
+            .main-image__small-describe {
+                font-size: 15px;
+            }
+        }
+    }
+}

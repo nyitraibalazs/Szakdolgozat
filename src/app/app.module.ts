@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PractiseComponent } from './PractiseComponent';
 import { PractiseServiceComponent } from './service';
+import {HeaderComponent} from "./header";
+import {LoginIndexComponent} from "./component/login-index";
 //import { MatDividerModule } from "@angular/material/divider";
 
 @NgModule({
   declarations: [
     AppComponent,
     PractiseComponent,
+    HeaderComponent,
+    LoginIndexComponent
    // MatDividerModule
   ],
 

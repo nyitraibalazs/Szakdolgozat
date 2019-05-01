@@ -4,8 +4,8 @@ import { PractiseServiceComponent } from './service';
 
 @Component({
     selector: 'app-practisecomponent',
-    templateUrl: './practise.component.html'
-    // styleUrls: ['../asdasd/asdasd']
+    templateUrl: './practise.component.html',
+    styleUrls: ['./practise.component.scss']
 })
 
 export class PractiseComponent implements OnInit {

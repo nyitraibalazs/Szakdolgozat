@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Good Day!</title>
+  <script type="application/javascript" src="login-index.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="choose__container__main">
+    <div class="choose__container">
+      <div class="choose__container__image">
+        <img src="image/banner.png" alt="Smiley face">
+      </div>
+
+      <h1>Welcome to Intelligence Page!</h1>
+      <h1>Please choose it!</h1>
+
+      <div class="choose__container__button">
+        <div class="input-group mb-3 ">
+          <select class="custom-select" id="inputGroupSelect01" onchange="elso(this.id)">
+            <option selected>Nappali/Levelező...</option>
+            <option value="Nappali">Nappali</option>
+            <option value="Levelezo">Levelező</option>
+          </select>
+        </div>
+
+        <div class="input-group mb-3">
+          <select class="custom-select" id="inputGroupSelect02" onchange="masodik(this.id)">
+            <option selected>Choose...</option>
+            <option value="Programtervező-Informatikus">Programtervező-Informatikus</option>
+            <option value="Mérnökinformatikus">Mérnök-Informatikus</option>
+            <option value="3">Gazdasági-Informatikus</option>
+          </select>
+        </div>
+
+        <button onclick="ertekei()" id="tovabblepesgomb" type="button" class="btn btn-primary btn-lg">Továbblépés</button>
+
+        <p>© 2017-2018</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

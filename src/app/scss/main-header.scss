@@ -1,0 +1,200 @@
+span {
+    display: inline-block;
+
+
+    &.light_bold {
+        font-family: "Arial Black";
+        position: relative;
+        z-index: 6;
+
+        &:before {
+            z-index: -1;
+            position: absolute;
+            content: "";
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 20px;
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+    }
+}
+
+
+
+.main-header {
+    //background-image: url("eds-www/../image/main-image.png");
+    background-position: 0 0;
+    height: 720px;
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-attachment: inherit;
+    text-align: center;
+
+    &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 1;
+    }
+
+    .main-header__text {
+        z-index: 2;
+        padding-top: 30px;
+        font-size: 14px;
+        color: $white;
+        font-family: $Montserrat;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        h1 {
+            padding-top: 20px;
+            font-size: 50px;
+            font-weight: bold;
+            text-shadow: 0 -1px 1px $white;
+            letter-spacing: -.05em;
+        }
+
+        .main-header__england {
+            text-transform: uppercase;
+
+            &:after {
+                margin-top: 20px;
+                content: "";
+                display: block;
+                height: 2px;
+                width: 40%;
+                position: absolute;
+                left: 30%;
+                right: 50%;
+
+                background-color: $white;
+            }
+        }
+
+        .main-header__btn-primary--one {
+            font-size: 20px;
+        }
+
+        .main-header__btn-primary--two {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (min-width: 520px){
+    .main-header {
+            height: 1080px;
+        background-position: 50% 0;
+        background-attachment: fixed;
+
+        .main-header__text {
+            margin-top: -20px;
+
+            .main-header__england {
+                &:after {
+                    width: 30%;
+                    left: 35%;
+                    right: 50%;
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .main-header {
+        .main-header__text {
+            font-size: 20px;
+            top: 45%;
+            left: 50%;
+
+            h1 {
+                font-size: 60px;
+            }
+
+            .main-header__england {
+                &:after {
+                    width: 110px;
+                    left: 37%;
+                    right: 48%;
+
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 992px){
+    .main-header {
+        .main-header__text {
+
+            h1 {
+                font-size: 70px;
+            }
+
+            .main-header__england {
+                &:after {
+                    width: 110px;
+                    left: 41%;
+                    right: 47%;
+
+                }
+            }
+
+            .main-header__small-describe {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+
+.banner-buttom {
+    .btn {
+        font-size: 9px;
+        padding: 10px 10px 10px 10px;
+        margin-top: 15px;
+        width: 150px;
+
+        &.main-header__btn-primary--one{
+            background-image: none;
+            background-color: $bottom-green;
+            border-bottom-color: $bottom-green;
+            border-left-color: $bottom-green;
+            border-right-color: $bottom-green;
+            border-top-color: $bottom-green;
+        }
+    }
+}
+
+@media (min-width: 520px) {
+    .banner-buttom {
+        .btn {
+            font-size: 12px;
+            padding: 12px 10px 12px 10px;
+            margin-top: 15px;
+            width: 150px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .banner-buttom {
+        .btn {
+            margin-top: 30px;
+            font-size: 20px;
+            width: 250px;
+        }
+    }
+}

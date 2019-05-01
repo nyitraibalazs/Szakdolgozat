@@ -1,0 +1,51 @@
+.container-fluid {
+    h3 {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .btn-outline-primary {
+        width: 80%;
+        max-width: 250px;
+        text-align: center;
+    }
+
+    .li-menu {
+        .li-menu__br {
+            border-bottom: 2px solid lightgray;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 30px;
+            width: 90%;
+
+            &--degree {
+                width: 60%;
+            }
+         }
+
+        .li-menu__button {
+            margin-top: 20px;
+        }
+    }
+
+
+
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+        .btn-outline-primary {
+            margin: 20px 0 0 0;
+        }
+    }
+
+    .li-menu {
+        &__button {
+            text-align: center;
+        }
+
+        &__br {
+            width: 80%;
+        }
+    }
+}

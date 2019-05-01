@@ -78,7 +78,7 @@ export class PractiseServiceComponent {
     const myArr2 = [
       {
         "id": 1,
-        "nev": "27. Sorolja fel a mesterséges intelligencia 14 alkalmazási területét!",
+        "nev": "Sorolja fel a mesterséges intelligencia 14 alkalmazási területét!",
         "pontszam": "7",
         "resz": "1",
       },
@@ -155,7 +155,7 @@ export class PractiseServiceComponent {
       {
         "id": 2,
         "nev": "Adja meg a rezolúció - formailag tört alakban megadott - szabályát és értelmezze!",
-        "pontszam": "3",
+        "pontszam": "8",
         "resz": "1",
       },
       {

@@ -1,0 +1,36 @@
+.container-links {
+    h2 {
+       margin: 20px 0 15px 0;
+   }
+
+    li {
+       color: grey;
+
+        a {
+            text-decoration: none;
+            color: gray;
+        }
+    }
+
+    .links-main {
+        li {
+            text-decoration: underline;
+        }
+
+        &:hover {
+          a {
+                &:hover {
+                    color: #3498db;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .container-links {
+        h2 {
+            font-size: 20px;
+        }
+    }
+}
