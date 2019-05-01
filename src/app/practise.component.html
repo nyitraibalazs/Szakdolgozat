@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <head>
   <meta charset="UTF-8">
   <title>Honlap címe</title>
 </head>
 
 <body>
-  <p>Hello world!</p>
-</body>
+  <div class="row">
+    <div class="col-12 col-md-5">
+      Zárthelyi dolgozat III. évf. Mesterséges Intelligencia BSc <br>
+      Miskolc, 2019.05.01.
+    </div>
 
-</html>
+    <p class="col-12 col-md-2">A csop.</p>
 
+    <div class="title col-12 col-md-5">
+      <span>Név: ................................................................................</span> <br>
+      <span>Tankör: ..........................................................................</span> <br>
+      <span>Neptun kód: ...............................................................</span> <br>
+      <span>Gyakorlatvezető: .......................................................</span>
+    </div>
+  </div>
 
-
-
-
-
-
-
-
-
-<!--<mat-divider></mat-divider>-->
-
-<!--<div *ngFor="let arr of someKindOfMagixelsozh">
-    {{arr.id}}
-    {{arr.nev}}
-</div>
--->
-<!--Mivel a arr csak 1 listán tud végigmenni de nekem sok listám van -->
     <div *ngIf="isValid0">
       <p>1. kérdés: {{elsozh.nev}}  ({{elsozh.pontszam}}p)</p>
     </div>
@@ -36,69 +31,62 @@
       <p>2. kérdés: {{elsozh1.nev}}  ({{elsozh1.pontszam}}p)</p>
     </div>
 
-    <div *ngIf="isValid0">
+    <div *ngIf="isValid2">
       <p>3. kérdés: {{elsozh2.nev}}  ({{elsozh2.pontszam}}p)</p>
     </div>
 
-    <div *ngIf="isValid0">
+    <div *ngIf="isValid3">
       <p>4. kérdés: {{elsozh3.nev}}  ({{elsozh3.pontszam}}p)</p>
     </div>
 
-    <div *ngIf="isValid0">
+    <div *ngIf="isValid4">
       <p>5. kérdés: {{elsozh4.nev}}  ({{elsozh4.pontszam}}p)</p>
     </div>
 
-    <div *ngIf="isValid0">
+    <div *ngIf="isValid5">
       <p>6. kérdés: {{elsozh5.nev}}  ({{elsozh5.pontszam}}p)</p>
     </div>
 
-    <div *ngIf="isValid0">
+    <div *ngIf="isValid6">
       <p>7. kérdés: {{elsozh6.nev}}  ({{elsozh6.pontszam}}p)</p>
     </div>
 
-    <div *ngIf="isValid0">
+    <div *ngIf="isValid7">
       <p>8. kérdés: {{elsozh7.nev}}  ({{elsozh7.pontszam}}p)</p>
     </div>
 
-    <div *ngIf="isValid0">
+    <div *ngIf="isValid8">
       <p>9. kérdés: {{elsozh8.nev}}  ({{elsozh8.pontszam}}p)</p>
     </div>
 
-    <div *ngIf="isValid0">
+    <div *ngIf="isValid9">
       <p>10. kérdés: {{elsozh9.nev}}  ({{elsozh9.pontszam}}p)</p>
     </div>
 
-    <div *ngIf="isValid0">
+    <div *ngIf="isValid10">
       <p>11. kérdés: {{elsozh10.nev}}  ({{elsozh10.pontszam}}p)</p>
     </div>
 
-    <div *ngIf="isValid1">
+    <div *ngIf="isValid11">
       <p>12. kérdés: {{elsozh11.nev}}  ({{elsozh11.pontszam}}p)</p>
     </div>
 
-    <div *ngIf="isValid2">
+    <div *ngIf="isValid12">
       <p>13. kérdés: {{elsozh12.nev}}  ({{elsozh12.pontszam}}p)</p>
     </div>
 
-    <div *ngIf="isValid3">
+    <div *ngIf="isValid13">
         <p>14. kérdés: {{elsozh13.nev}}  ({{elsozh13.pontszam}}p)</p>
     </div>
 
   <p>Összpontszám {{maxeredmeny}}</p>
-<!--
-<h1>ZH Generátor</h1>
-<div>
-  <p>1. kérdés: {{elsozh.nev}}  ({{elsozh.pontszam}}p)</p>
 
- <p>1. kérdés: {{elsozh.nev}}  ({{elsozh.pontszam}}p)</p>
-  <p>2. kérdés: {{elsozh1.nev}} ({{elsozh1.pontszam}}p)</p>
-  <p>3. kérdés: {{elsozh2.nev}} ({{elsozh2.pontszam}}p)</p>
-  <p>4. kérdés: {{elsozh3.nev}} ({{elsozh3.pontszam}}p)</p>
-  <p>5. kérdés: {{elsozh4.nev}} ({{elsozh4.pontszam}}p)</p>
+  <p>Értékelés: 0-{{maxeredmeny*0.5}}p elégtelen, {{maxeredmeny*0.5+1}}-{{maxeredmeny*0.6}}p elégséges, {{maxeredmeny*0.6+1}}-{{maxeredmeny*0.7}}p közepes, {{maxeredmeny*0.7+1}}-{{maxeredmeny*0.84}}p jó, {{maxeredmeny*0.85}}-{{maxeredmeny}}p jeles</p>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
 
-  <p>Összes pont: 72p</p>
-  <p>Feladatok pontja: {{maxeredmeny}}</p>
-
-</div>-->
+</html>
 
