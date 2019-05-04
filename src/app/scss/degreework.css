@@ -1,0 +1,32 @@
+.card-body {
+  display: flex;
+  /* .row {
+       width: 100%;
+   }*/
+}
+.card-body img {
+  max-width: 250px;
+}
+
+.container-fluid h1 {
+  text-align: center;
+  margin: 15px 0 0 0;
+}
+
+@media (max-width: 520px) {
+  .card-my-img img {
+    display: none;
+  }
+}
+@media (min-width: 521px) {
+  .card-body .card-my-box {
+    padding: 0 15px;
+  }
+}
+@media (min-width: 891px) and (max-width: 1140px) {
+  .card-body .card-my-box {
+    padding-left: 50px;
+  }
+}
+
+/*# sourceMappingURL=degreework.css.map */

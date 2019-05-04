@@ -1,0 +1,24 @@
+.container-links h2 {
+  margin: 20px 0 15px 0;
+}
+.container-links li {
+  color: grey;
+}
+.container-links li a {
+  text-decoration: none;
+  color: gray;
+}
+.container-links .links-main li {
+  text-decoration: underline;
+}
+.container-links .links-main:hover a:hover {
+  color: #3498db;
+}
+
+@media (max-width: 520px) {
+  .container-links h2 {
+    font-size: 20px;
+  }
+}
+
+/*# sourceMappingURL=links.css.map */

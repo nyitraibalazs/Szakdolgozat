@@ -23,7 +23,6 @@ span {
 
 
 .main-header {
-    //background-image: url("eds-www/../image/main-image.png");
     background-position: 0 0;
     height: 720px;
     display: block;
@@ -168,7 +167,6 @@ span {
         width: 150px;
 
         &.main-header__btn-primary--one{
-            background-image: none;
             background-color: $bottom-green;
             border-bottom-color: $bottom-green;
             border-left-color: $bottom-green;

@@ -1,0 +1,60 @@
+body {
+  background-color: #f5f5f5;
+  font-weight: 400;
+}
+
+.choose__container__main {
+  position: relative;
+}
+.choose__container__main .choose__container {
+  width: 80%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.choose__container__main .choose__container img {
+  margin-top: 20px;
+}
+.choose__container__main .choose__container p {
+  position: relative;
+  text-align: center;
+  margin-top: 80px;
+}
+.choose__container__main .choose__container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.75em;
+}
+.choose__container__main .choose__container .choose__container__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.choose__container__main .choose__container .choose__container__button {
+  position: relative;
+}
+.choose__container__main .choose__container .choose__container__button .input-group {
+  width: 80%;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 300px;
+}
+.choose__container__main .choose__container .choose__container__button .btn {
+  background-color: white;
+  color: #1876c0;
+}
+.choose__container__main .choose__container .choose__container__button .btn.btn-primary {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.choose__container__main .choose__container .choose__container__button .btn:hover {
+  background-color: #1876c0;
+  color: white;
+}
+
+/*# sourceMappingURL=loginpanel.css.map */
