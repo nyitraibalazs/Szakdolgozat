@@ -9,6 +9,7 @@ import {complexComponent} from "./component/software-enginer/complex";
 import {degreeWorkComponent} from "./component/software-enginer/degree-work";
 import {educationComponent} from "./component/software-enginer/education";
 import {linksComponent} from "./component/software-enginer/links";
+import {modalComponent} from "./component/software-enginer/modal";
 
 const routes: Routes = [
   {

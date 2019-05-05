@@ -6,4 +6,13 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class complexComponent {
+  getMobile() {
+    return "url('http://ujweboldalfejlesztes.hu/image/degree/mobilaps.jpg')";
+  }
+
+  getUnity() {
+    return "url('http://ujweboldalfejlesztes.hu/image/complex/unity.png')";
+  }
+
+
 }

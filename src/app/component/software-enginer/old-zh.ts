@@ -6,5 +6,4 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class oldZHComponent {
-  isVisibleoldZH = false;
 }

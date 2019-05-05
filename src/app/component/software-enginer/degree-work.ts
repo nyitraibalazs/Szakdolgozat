@@ -6,5 +6,10 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class degreeWorkComponent {
-
+  getUrl() {
+    return "url('http://ujweboldalfejlesztes.hu/image/degree/informacios_szolg.png')";
+  }
+  getMobile() {
+    return "url('http://ujweboldalfejlesztes.hu/image/degree/mobilaps.jpg')";
+  }
 }

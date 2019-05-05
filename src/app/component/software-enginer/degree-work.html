@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid degree-work">
   <h1>Elérhető Szakdolgozat témák:</h1>
 
   <div class="container-fluid">
@@ -6,7 +6,9 @@
       <div class="card-body">
         <div class="row">
           <div class="card-my-img col-12 col-md-5 col-lg-3">
-            <img src="../../../image/degree/informacios_szolg.png" alt="HTML5">
+            <div style="width: 280px;height: 280px">
+              <div style="width: 280px;height: 280px" [ngStyle]="{'background-image': getUrl()}"> </div>
+            </div>
           </div>
 
           <div class="card-my-box col-12 col-md-7 col-lg-9">
@@ -32,7 +34,9 @@
       <div class="card-body">
         <div class="row">
           <div class="card-my-img col-12 col-md-5 col-lg-3">
-            <img src="../../../image/degree/szabadsag-nyilvantartas.png" alt="HTML5">
+            <div style="width: 280px;height: 280px">
+              <div style="width: 276px;height: 183px" [ngStyle]="{'background-image': getMobile()}"> </div>
+            </div>
           </div>
 
           <div class="card-my-box col-12 col-md-7 col-lg-9">

@@ -14,6 +14,10 @@ import {complexComponent} from "./component/software-enginer/complex";
 import {degreeWorkComponent} from "./component/software-enginer/degree-work";
 import {educationComponent} from "./component/software-enginer/education";
 import {linksComponent} from "./component/software-enginer/links";
+import {PdfViewerModule} from "ng2-pdf-viewer";
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import {miea1Component} from "../assets/EA/MIea1";
+import {modalComponent} from "./component/software-enginer/modal";
 
 
 @NgModule({
@@ -28,13 +32,17 @@ import {linksComponent} from "./component/software-enginer/links";
     complexComponent,
     degreeWorkComponent,
     educationComponent,
-    linksComponent
+    linksComponent,
+    miea1Component,
+    modalComponent
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    PdfViewerModule,
+    NgxExtendedPdfViewerModule
   ],
 
   providers: [
