@@ -10,6 +10,10 @@ import {degreeWorkComponent} from "./component/software-enginer/degree-work";
 import {educationComponent} from "./component/software-enginer/education";
 import {linksComponent} from "./component/software-enginer/links";
 import {modalComponent} from "./component/software-enginer/modal";
+import {Zh2Component} from "./Zh2Component";
+import {alpotComponent} from "./AlpotComponent";
+import {vizsgaComponent} from "./vizsgaComponent";
+
 
 const routes: Routes = [
   {
@@ -19,10 +23,6 @@ const routes: Routes = [
   {
     path: 'zh',
     component: PractiseComponent
-  },
-  {
-    path: 'old-zh',
-    component: oldZHComponent
   },
   {
     path: 'complex',
@@ -39,6 +39,18 @@ const routes: Routes = [
   {
     path: 'links',
     component: linksComponent
+  },
+  {
+    path: 'twozh',
+    component: Zh2Component
+  },
+  {
+    path: 'alpot',
+    component: alpotComponent
+  },
+  {
+    path: 'vizsga',
+    component: vizsgaComponent
   }
 ];
 

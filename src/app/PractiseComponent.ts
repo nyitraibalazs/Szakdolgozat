@@ -34,6 +34,7 @@ export class PractiseComponent implements OnInit {
 
 
     public maxeredmeny;
+
     private pmax;
 
     //I. ZH eredményei

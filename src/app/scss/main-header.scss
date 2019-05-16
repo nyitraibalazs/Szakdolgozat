@@ -114,7 +114,7 @@ span {
     .main-header {
         .main-header__text {
             font-size: 20px;
-            top: 45%;
+            top: 30%;
             left: 50%;
 
             h1 {
@@ -156,6 +156,14 @@ span {
             }
         }
     }
+}
+
+@media (min-width: 1400px) {
+  .main-header {
+    .main-header__text {
+        top: 45%;
+    }
+  }
 }
 
 

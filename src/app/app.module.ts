@@ -18,7 +18,13 @@ import {PdfViewerModule} from "ng2-pdf-viewer";
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import {miea1Component} from "../assets/EA/MIea1";
 import {modalComponent} from "./component/software-enginer/modal";
-
+import {Zh2Component} from "./Zh2Component";
+import {navbarGeneratorComponent} from "./generator-navbar";
+import {PractiseZh2ServiceComponent} from "./zh2.service";
+import {alpotComponent} from "./AlpotComponent";
+import {alpotServiceComponent} from "./Alpot.service";
+import {vizsgaServiceComponent} from "./vizsga.service";
+import {vizsgaComponent} from "./vizsgaComponent";
 
 @NgModule({
   declarations: [
@@ -34,7 +40,11 @@ import {modalComponent} from "./component/software-enginer/modal";
     educationComponent,
     linksComponent,
     miea1Component,
-    modalComponent
+    modalComponent,
+    Zh2Component,
+    navbarGeneratorComponent,
+    alpotComponent,
+    vizsgaComponent
   ],
 
   imports: [
@@ -47,6 +57,9 @@ import {modalComponent} from "./component/software-enginer/modal";
 
   providers: [
     PractiseServiceComponent,
+    PractiseZh2ServiceComponent,
+    alpotServiceComponent,
+    vizsgaServiceComponent
   ],
 
   bootstrap: [AppComponent]
